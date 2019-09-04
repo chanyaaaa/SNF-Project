@@ -5,13 +5,40 @@ This is a trade dispute data comrpises of:
                full_title is the full title of each dispute,
                short_title is the short title of each dispute, and
                report_adopted is a boolean value (true/false) (true if the report is adopted)
+
 2. dispute_documents.csv contains relevant documents relating to each dispute
    parameters: dispute is the DS code indentifer of dispute,
-               document_id is the unique id for each document (assigned by us for the purpose of identification),
+               document_id is the unique id for each document (assigned by us for the purpose of identification and the same as 5, 7, 8 and 9),
                title is the official title of each document, and
                symbol is the WTO assigned symbol for each document
+
 3. dispute_cited_agt.csv contains a panel data of all boolean values, indiciating WTO cited agreements by each dispute
    parametes: first column is the DS code indentifier
               the next 21 columns correspond to WTO agreements
+
 4. dispute_country_role.csv contains data countries involved in each dispute
-   parameters: 
+   parameters: dispute is the DS code inditifier of dispute,
+               country is iso3 country code (refer to https://unstats.un.org/unsd/tradekb/knowledgebase/country-code for full names)
+               role is the role of the corresponding country in the dispute (0 means Claimant, 2 means Respondent, and 1 means Third Party)
+
+5. documents_meta.csv contains the basic information relating to WTO documents
+   parameters: id is the unique id for each document (assigned by us and is the same as id as 2, 7, 8),
+               symbol is the WTO assigned symbol for each document,
+               title is the official title of the corresponding document,
+               pages is the number of pages of the corresponding document
+
+6. wto_agt.csv contains a list of all WTO agreements
+   parameters: name is the full name of an agreement
+               short_name is the short name corresponding to each agreement
+               dolcode is the code name for each corresponding agreement
+
+7. xml_doctype_4_arbitration.csv contains xml of the text with corresponding document id (filtered only document type 4, Arbitation Report)
+   parameters: document_id is the unique id for each document (assigned by us and is the same as id in 2, 5, 8)
+               xml is the xml text for a corresponding document
+
+8. xml_doctype_5_AB.csv contains xml of the text with corresponding document id (filtered only document type 5, AB Report)
+   parameters: document_id is the unique id for each document (assigned by us and is the same as id in 2, 5, 7)
+               xml is the xml text for a corresponding document
+             
+
+
