@@ -1,2 +1,16 @@
 This is a trade dispute data comrpises of:
-1. Trade meta data reporting all trade disputes in the WTO.
+1. WTO_disputes_meta.csv contains basic information relating to all WTO disputes
+   parameters: dispute_code is the DS code identifier of dispute, 
+               full_title is the full title of each dispute,
+               short_title is the short title of each dispute, and
+               report_adopted is a boolean value (true/false) (true if the report is adopted)
+2. dispute_documents.csv contains relevant documents relating to each dispute
+   parameters: dispute is the DS code indentifer of dispute,
+               document_id is the unique id for each document (assigned by us for the purpose of identification),
+               title is the official title of each document, and
+               symbol is the WTO assigned symbol for each document
+3. dispute_cited_agt.csv contains a panel data of all boolean values, indiciating WTO cited agreements by each dispute
+   parametes: first column is the DS code indentifier
+              the next 21 columns correspond to WTO agreements
+4. dispute_country_role.csv contains data countries involved in each dispute
+   parameters: 
